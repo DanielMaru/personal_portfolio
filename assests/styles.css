@@ -1,0 +1,391 @@
+*{
+margin: 0;
+padding: 0;
+}
+html, body {
+    height: 100%;
+}
+body {
+    overflow-y: scroll;
+}
+body {
+font-family: 'Oswald', sans-serif;
+color: white;
+}
+a {
+color: white;
+text-decoration: none;
+}
+section{
+height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+position: relative;
+z-index: 1;
+}
+h1, h2, h3, h4 {
+color: #009acc;
+}
+h1 {
+font-size: 5rem;
+}
+.principal-title {
+font-size: 38px;
+}
+.title-color{
+color: #009acc;
+}
+.color-black{
+color: black;
+}
+.color-white{
+color: white;
+}
+.mt-3{
+margin-top: 5vh;
+}
+.mt-5{
+margin-top: 5vh;
+}
+.mt-10{
+margin-top: 10vh;
+}
+.mt-15{
+margin-top: 20vh;
+}
+.mt-20{
+margin-top: 20vh;
+}
+.mt-30{
+margin-top: 30vh;
+}
+.mr-05 {
+margin-right: 0.5vw;
+}
+.mr-2 {
+margin-right: 2vw;
+}
+.text-c{
+text-align: center;
+}
+.z-1 {
+z-index: 1;
+}
+.d-flex{
+display: flex;
+}
+.flex-c{
+flex-direction: column;
+}
+.flex-r{
+flex-direction: row;
+}
+.flex-eq-size {
+flex: 1;
+}
+.jus-center{
+justify-content: center;
+}
+.ml-auto{
+margin-left: auto;
+}
+.mr-auto{
+margin-right: auto;
+}
+.position-r{
+position: relative;
+}
+
+section#intro{
+    background: url('background3.jpg') no-repeat center center/cover;
+    justify-content: flex-end;
+}
+section#intro .name {
+    margin-bottom: 15%;
+}
+
+section#projects{
+    background: url('circuit3.jpg') no-repeat center center/cover;
+    height: 100%;
+}
+.fullstack-img{
+background: url('fullstack3.png') no-repeat center center/cover;
+width: 100%;
+height: 47vh;
+background-size: contain;
+}
+section#intro::after, section#projects::after{
+opacity:50%;
+}
+.jus-end{
+justify-content: end;
+}
+section.black-background::after {
+content:'\A';
+position:absolute;
+width:100%; height:100%;
+top:0; left:0;
+background:black;
+z-index: -1;
+}
+.profile p{
+width: 73%;
+font-size: 22px;
+text-align: center;
+}
+.carousel-img{
+width: 100%;
+height: 24vh;
+}
+.html-img{
+background: url('html.png') no-repeat center center/contain;
+}
+.angular-img{
+background: url('angular.png') no-repeat center center/contain;
+}
+.node-img{
+background: url('node.png') no-repeat center center/contain;
+}
+.java-img{
+background: url('java.png') no-repeat center center/contain;
+}
+.react-img{
+background: url('react.png') no-repeat center center/contain;
+}
+.docker-img{
+background: url('docker.png') no-repeat center center/contain;
+}
+.js-img{
+background: url('js.png') no-repeat center center/contain;
+}
+.spring-img{
+background: url('spring.png') no-repeat center center/contain;
+}
+.xochi-stack{
+background: url('xochi-stack.png') no-repeat center center/contain;
+}
+.sport-stack{
+background: url('sport-stack.png') no-repeat center center/contain;
+}
+.preview-xochi{
+    background: url('preview-xochi.png') no-repeat center center/contain;
+}
+.preview-sport{
+    background: url('preview-sport.png') no-repeat center center/contain;
+}
+.preview-majo{
+    background: url('preview-majo.png') no-repeat center center/contain;
+}
+.card{
+height: 270px;
+width: 240px;
+margin-right: 5vw;
+position: relative;
+/* background: url('xochi2.jpg') no-repeat center center/contain; */
+}
+.front, .back{
+width: 100%;
+height: 100%;
+overflow: hidden;
+backface-visibility: hidden;
+position: absolute;
+transition: transform .6s linear;
+}
+.front {
+background-color: rgba(0, 0, 0, 0.521);
+transform: perspective(600px) rotateY(0deg);
+}
+.back {
+background-color: #0099cc5d;
+transform: perspective(600px) rotateY(180deg);
+}
+.card:hover > .front {
+transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back {
+transform: perspective(600px) rotateY(0deg);
+}
+.stack-img {
+width: 100%;
+height: 22vh;
+}
+.preview-img{
+width: 85%;
+height: 17vh;
+}
+.preview-play{
+position: absolute;
+top: 31%;
+left: 42%;
+color: black;
+background-size: contain;
+height: 30px;
+width: 30px;
+opacity: 0;
+transition: .5s ease;
+}
+.container-preview{
+cursor: pointer;
+}
+.container-preview:hover .preview-play{
+opacity: 1;
+}
+.container-preview:hover .preview-img{
+opacity: 0.3;
+}
+.contact-item{
+height: 9vh;
+width: 14vw;
+background-color: #0099cc5d;
+margin-right: 1vw;
+margin-top: 4vh;
+}
+.description{
+font-size: 22px;
+text-align: center;
+width: 32%;
+font-weight: initial;
+}
+.cursor-p{
+cursor: pointer;
+}
+.contact-item .contact-text{
+padding: 8%;
+text-align: center;
+}
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(235, 210, 210, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+background-color: #fefefe;
+margin: auto;
+padding: 0px 0px 20px 20px;
+border: 1px solid #888;
+display: inline-table;
+}
+
+/* The Close Button */
+.close {
+float: right;
+font-size: 28px;
+font-weight: bold;
+height: 4vh;
+width: 4vh;
+padding: 5px;
+}
+
+.close:hover,
+.close:focus {
+color: #000;
+text-decoration: none;
+cursor: pointer;
+}
+.modal-preview-gift{
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 80vh;
+}
+.modal-full{
+    width: 82vw;
+}
+.modal-responsive{
+    width: 24vw;
+}
+
+.image-preview-container {
+    padding-right: 18px;
+}
+
+
+
+
+
+
+
+.arrow
+{
+  width: 40px;
+  height: 40px;
+
+  /**
+   * Dark Arrow Down
+   */
+  background-image: url('./down.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+    section#projects{
+        height: 206%;
+    }
+    section#intro{
+        height: 100%;
+    }
+    .card-container {
+        flex-direction: column;
+    }
+    .card{
+        margin-right: 0;
+        margin-top: 2vh;
+    }
+    .contact-container {
+        flex-direction: column;
+        width: 50%;
+    }
+    .contact-item {
+        width: 100%;
+    }
+    .flex-responsive-c{
+        flex-direction: column;
+    }
+    .principal-title {
+        margin-top: 10vh;
+    }
+    .profile p {
+        width: 100%;
+    }
+    .description{
+        width: 100%;
+    }
+    section#intro .name{
+        margin-bottom: 50%;
+    }
+    .preview-play{
+        opacity: 1;
+    }
+    .container-preview .preview-img{
+        opacity: 0.3;
+    }
+}
+
